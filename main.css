@@ -56,6 +56,11 @@ nav ul li {
     padding-bottom: 16px;
 }
 
+.about img {
+    width: 300px;
+    height: 300px;
+}
+
 .produtos {
     display: grid;
     grid-template-columns: repeat(4, 24.25%);
@@ -75,4 +80,9 @@ nav ul li {
     font-weight: bold;
     color: #fff;
     border-radius: 2px;
+}
+
+.produtos img {
+    width: 250px;
+    height: 250px;
 }
