@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Robot, sans-serif;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #dcdcdc;
 }
 
 .container {
@@ -26,12 +30,13 @@ header .container {
 nav ul {
     list-style-type: none;
     display: flex;
+    padding: 16px;
 }
 
-nav ul li {
-    padding: 16px;
+nav ul li {    
     font-weight: bold;
     cursor: pointer;
+    padding: 8px;
 }
 
 .container > h2 {
@@ -80,9 +85,86 @@ nav ul li {
     font-weight: bold;
     color: #fff;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .produtos img {
     width: 250px;
     height: 250px;
+}
+@media screen and (orientation:portrait) and (max-width:1023px) and (min-width:641px) {
+
+    .container {
+        width: 90%;
+    }
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+    }
+
+    .about {
+        display: block;     
+        max-width: 100%;   
+    }
+
+    .about img {
+        width: 100%;
+        padding-bottom: 8px;
+    }
+
+    .about-text {
+        padding-left: 0;
+        
+    }
+
+    .produtos img {
+        width: 100%;
+    }
+
+    .produtos button {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 85%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav ul li {    
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0px;
+    }
+
+    .about {
+        display: block;
+        width: 100%;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .about-text {
+        padding: 0;
+        margin-top: 16px;
+    }
+
+    .produtos {
+        display: block;
+    }
+
+    .produtos article {
+        margin-top: 20px;
+    }
+
+    .produtos img {
+        width: 100%;
+    }
 }
